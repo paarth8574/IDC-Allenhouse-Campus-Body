@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDC Admin Panel</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="admin-body">
+    <main class="container admin-wrap">
+      <h1>Admin Dashboard</h1>
+      <section class="panel" id="authPanel">
+        <h2>Admin Login</h2>
+        <form id="loginForm" class="join-form">
+          <input type="email" name="email" placeholder="Admin email" required />
+          <input type="password" name="password" placeholder="Password" required />
+          <button class="btn" type="submit">Login</button>
+          <p id="loginMsg"></p>
+        </form>
+      </section>
+
+      <section class="panel" id="dashboard" hidden>
+        <button id="logoutBtn" class="btn btn-outline">Logout</button>
+
+        <h2>Manage Events</h2>
+        <form id="eventForm" class="join-form" enctype="multipart/form-data">
+          <input name="title" placeholder="Event title" required />
+          <input type="date" name="date" required />
+          <textarea name="description" placeholder="Description" required></textarea>
+          <input name="registrationLink" placeholder="Registration link" />
+          <input type="file" name="poster" accept="image/*" />
+          <button class="btn" type="submit">Add Event</button>
+        </form>
+        <ul id="eventList"></ul>
+
+        <h2>Manage Team</h2>
+        <form id="teamForm" class="join-form" enctype="multipart/form-data">
+          <input name="name" placeholder="Name" required />
+          <input name="role" placeholder="Role" required />
+          <input name="linkedin" placeholder="LinkedIn URL" />
+          <input name="github" placeholder="GitHub URL" />
+          <input type="file" name="photo" accept="image/*" />
+          <button class="btn" type="submit">Add Team Member</button>
+        </form>
+        <ul id="teamList"></ul>
+
+        <h2>Manage Gallery</h2>
+        <form id="galleryForm" class="join-form" enctype="multipart/form-data">
+          <input name="caption" placeholder="Caption" />
+          <input type="file" name="image" accept="image/*" required />
+          <button class="btn" type="submit">Add Image</button>
+        </form>
+        <ul id="galleryList"></ul>
+
+        <h2>Registrations</h2>
+        <ul id="registrationList"></ul>
+      </section>
+    </main>
+    <script src="assets/js/admin.js"></script>
+  </body>
+</html>

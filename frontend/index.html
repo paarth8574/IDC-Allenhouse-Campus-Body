@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Data Club – Allenhouse Business School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar" id="top">
+      <div class="container nav-wrap">
+        <a href="#home" class="brand">
+          <span class="logo">IDC</span>
+          <span>Indian Data Club</span>
+        </a>
+        <button id="menuBtn" class="menu-btn">☰</button>
+        <nav id="navMenu" class="nav-links">
+          <a href="#home">Home</a><a href="#about">About</a><a href="#team">Team</a><a href="#events">Events</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a><a href="#join">Join</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="tag">Allenhouse Business School Campus Body</p>
+          <h1>Build. Analyze. Lead with Data.</h1>
+          <p>Indian Data Club is a student-led community driving innovation through data science, AI, analytics, and collaborative learning.</p>
+          <div class="hero-actions">
+            <a href="#join" class="btn">Join Now</a>
+            <a href="#events" class="btn btn-outline">Explore Events</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>What we offer</h3>
+          <ul>
+            <li>Weekly tech sessions</li>
+            <li>Hands-on workshops</li>
+            <li>Hackathons & competitions</li>
+            <li>Career mentorship</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2>About Indian Data Club</h2>
+      <div class="two-col">
+        <article><h3>Mission</h3><p>To empower students with practical data and technology skills through peer learning, mentorship, and industry-oriented activities.</p></article>
+        <article><h3>Vision</h3><p>To build a thriving campus ecosystem where students solve real-world problems using data, AI, and innovation.</p></article>
+      </div>
+      <p class="about-text">The club organizes coding circles, analytics bootcamps, project showcases, and interdisciplinary events for students from all departments.</p>
+    </section>
+
+    <section class="stats section">
+      <div class="container stats-grid" id="statsGrid"></div>
+    </section>
+
+    <section id="team" class="section container">
+      <h2>Core Team</h2>
+      <div id="teamGrid" class="cards-grid"></div>
+    </section>
+
+    <section id="events" class="section container">
+      <h2>Upcoming Events</h2>
+      <div id="eventGrid" class="cards-grid"></div>
+    </section>
+
+    <section id="gallery" class="section container">
+      <h2>Gallery</h2>
+      <div id="galleryGrid" class="gallery-grid"></div>
+    </section>
+
+    <section id="join" class="section join-section">
+      <div class="container">
+        <h2>Join the Community</h2>
+        <form id="joinForm" class="join-form">
+          <input name="name" placeholder="Full Name" required />
+          <input name="course" placeholder="Course" required />
+          <input name="year" placeholder="Year" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input name="phone" placeholder="Phone" required />
+          <textarea name="interests" placeholder="Interests" required></textarea>
+          <button type="submit" class="btn">Submit Registration</button>
+          <p id="formMsg"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <p>Email: idc.allenhouse@example.com | Phone: +91 90000 00000</p>
+      <p>Allenhouse Business School Campus, Kanpur, Uttar Pradesh</p>
+      <p>Follow us: LinkedIn · Instagram · GitHub</p>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <p>© <span id="year"></span> Indian Data Club, Allenhouse Business School.</p>
+        <a href="admin.html">Admin Portal</a>
+      </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox"><img id="lightboxImg" alt="gallery" /></div>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
