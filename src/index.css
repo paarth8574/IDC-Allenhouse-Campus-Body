@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: auto;
+}
+
+/* ===== SCROLL REVEAL ===== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-reveal {
+  opacity: 0;
+  transform: translateY(100px) scale(0.95);
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-reveal.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.animate-floatSlow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+
+
+@keyframes floatBubble {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.bubble-float {
+  animation: floatBubble 2.5s ease-in-out infinite;
+}
+
+
+/* ===== INTERACTIVE CARD EFFECT ===== */
+
+.tilt-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease;
+  overflow: hidden;
+}
+
+/* Soft gradient glow */
+.tilt-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(34, 197, 94, 0.18),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.tilt-card:hover::before {
+  opacity: 1;
+}
+/* ===== Entrance Animation ===== */
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-enter {
+  animation: fadeUp 1s ease-out forwards;
+}
+
+/* ===== Floating Animation ===== */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+/* ===== HERO ENTRANCE ANIMATION ===== */
+
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero-enter {
+  animation: heroFadeUp 0.9s ease-out forwards;
+  opacity: 0;
+}
+/* ===== FLOAT ANIMATION ===== */
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+
+/* ===== GFG STYLE FLOATING CIRCLES ===== */
+
+.float-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: circleFloat 12s ease-in-out infinite;
+}
+
+/* COLORS */
+
+.float-circle.green {
+  background: #22c55e;
+}
+
+.float-circle.blue {
+  background: #3b82f6;
+}
+
+.float-circle.yellow {
+  background: #facc15;
+}
+
+/* POSITIONS */
+
+.top-left {
+  width: 140px;
+  height: 140px;
+  top: 60px;
+  left: 80px;
+}
+
+.bottom-right {
+  width: 160px;
+  height: 160px;
+  bottom: 60px;
+  right: 80px;
+  animation-delay: 3s;
+}
+
+.mid {
+  width: 90px;
+  height: 90px;
+  top: 50%;
+  left: 35%;
+  animation-delay: 1.5s;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes circleFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+
+/* ===== OUTLINE HEART ANIMATION ===== */
+
+@keyframes heartPulse {
+  0%, 100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-heart {
+  animation: heartPulse 1.6s ease-in-out infinite;
+}
+
+
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Thumb (scroll handle) */
+::-webkit-scrollbar-thumb {
+  background: #9374DC;
+  border-radius: 10px;
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #7c5ed3;
+}
